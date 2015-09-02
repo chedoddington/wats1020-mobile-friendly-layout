@@ -11,29 +11,6 @@ img {
 	padding: 1em;
 }
 
-#memory_board {
-	background: #CCC;
-	border: #999 solid 1px;
-	padding: 30px;
-	width: 800px;
-	height: 540px;
-	margin: 0px auto;
-}
-
-#memory_board > div {
-	background: url('../design/card-backs.jpg') no-repeat;
-	background-size: 70px;
-	border: #000 solid 1px;
-	padding: 20px;
-	width: 71px;
-	height: 71px;
-	float: left;
-	margin: 10px;
-	text-align: center;
-	cursor: pointer;
-	font-size: 60px;
-}
-
 ul {
 	padding: 0;
 }
@@ -47,7 +24,11 @@ li {
 	list-style-type: none;
 }
 
-
+#memory_board .col-md-3 {
+	overflow: hidden;
+	max-height: 240px;
+	padding: .25em;
+}
 
 
 

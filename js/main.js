@@ -1,11 +1,11 @@
-var memory_array = ['url(../design/flawless.jpg)', 'url(../design/flawless.jpg)', 
-					'url(../design/denim.jpg)', 'url(../design/denim.jpg)',
-					'url(../design/flowercrown.jpg)', 'url(../design/flowercrown.jpg)',
-					'url(../design/rosie.jpg)', 'url(../design/rosie.jpg)',
-					'url(../design/gold.jpg)', 'url(../design/gold.jpg)',
-					'url(../design/museum.jpg)', 'url(../design/museum.jpg)',
-					'url(../design/sunglasses.jpg)', 'url(../design/sunglasses.jpg)',
-					'url(../design/swimsuit.jpg)', 'url(../design/swimsuit.jpg)'];
+var memory_array = [ 
+					'design/denim.jpg', 'design/denim.jpg',
+					'design/flowercrown.jpg', 'design/flowercrown.jpg',
+					'design/coachella.jpg', 'design/coachella.jpg',
+					'design/gold.jpg', 'design/gold.jpg',
+					'design/museum.jpg', 'design/museum.jpg',
+					'design/sunglasses.jpg', 'design/sunglasses.jpg',
+				   ];
 var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
@@ -24,20 +24,37 @@ Array.prototype.memory_tile_shuffle = function() {
 	}
 };
 
-function newBoard (){
-	tiles_flipped = 0;
-	var output = '';
+function newBoard() {
+	//shuffle
 	memory_array.memory_tile_shuffle();
-	for (var i = 0; i < memory_array.length; i++) {
-		output += '<div id="tile_'+i+'"onclick="memoryFlipTile (this,\''+memory_array[i]+'\')"></div>';
-	}
-	document.getElementById('memory_board').innerHTML = output;
+	
+    var space = $("#memory_board");
+	space.html('');
+ 
+    var row = $("<div>").addClass("row").appendTo(space);
+ 
+    // loop over the set of images
+    for (i = 0; i < memory_array.length; i++) {
+        // create an image html tag
+        var tile = $("<img>");
+ 
+        //
+        tile.attr("src", 'design/card-backs.jpg');
+		tile.attr("id", 'card' + i);
+ 
+        tile.addClass("col-xs-4 col-md-3").addClass("img-responsive");
+		tile.click ({val:memory_array[i]},memoryFlipTile);
+ 
+        row.append(tile);
+    }
+    console.log(space);
 }
 
-function memoryFlipTile(tile,val) {
+function memoryFlipTile(e) {
+	var tile = this;
+	var val = e.data.val;
 	if(tile.innerHTML === "" && memory_values.length < 2) {
-		tile.style.background = val;
-		//tile.innerHTML = val;
+		tile.src = val;
 		if (memory_values.length === 0) {
 			memory_values.push(val);
 			memory_tile_ids.push(tile.id);
@@ -57,10 +74,8 @@ function memoryFlipTile(tile,val) {
 				function flip2Back() {
 					var tile_1 = document.getElementById(memory_tile_ids[0]);
 					var tile_2 = document.getElementById(memory_tile_ids[1]);
-					tile_1.style.background = 'url(../design/card-backs.jpg) no-repeat';
-					tile_1.innerHTML = "";
-					tile_2.style.background = 'url(../design/card-backs.jpg) no-repeat';
-					tile_2.innerHTML = "";
+					tile_1.src = 'design/card-backs.jpg';
+					tile_2.src = 'design/card-backs.jpg';
 					memory_values = [];
 					memory_tile_ids = [];
 				}
