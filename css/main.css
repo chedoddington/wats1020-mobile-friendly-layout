@@ -7,21 +7,39 @@ html {
 	padding: 0;
 }
 
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-default{
+	background-color: black;
+	border-color: black;
+	margin-bottom: 0;
+}
+
+.navbar-default .navbar-brand{
+	background-color: black;
+	color: #FFCDD5;
+}
+
+#navbar-links a:hover {
+	color: #FFCDD5;
+	background-color: black;
+}
+
 img {
-	padding: 1em;
-}
-
-ul {
-	padding: 0;
-}
-
-p {
-	padding: 0;
-	margin: 0;
+	padding-bottom: 1em;
 }
 
 li {
 	list-style-type: none;
+}
+
+.how-to-play {
+	padding: 1em;
+	text-align: center;
 }
 
 #memory_board .col-md-3 {
@@ -30,9 +48,25 @@ li {
 	padding: .25em;
 }
 
+.lead {
+	text-align: center;
+	padding-top: 1em;
+	margin-bottom: 0;
+}
 
+.glyphicon {
+	margin-bottom: 1em;
+}
 
+.glyphicon-eye-open {
+	text-align: center;
+}
 
+#player {
+	border: 2em black solid; 
+	margin-bottom: 2em;
+}
 
-
-
+#footer-text{
+	text-align: right;
+}

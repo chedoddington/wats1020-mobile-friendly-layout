@@ -9,10 +9,16 @@ var memory_array = [
 var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
+var max_height=0;
+
 
 $(document).ready(function(e){
 	newBoard();
 });
+
+window.onresize=function(e) {
+	$()	
+};
 
 Array.prototype.memory_tile_shuffle = function() {
 	var i = this.length, j, temp;
@@ -66,7 +72,7 @@ function memoryFlipTile(e) {
 				memory_values = [];
 				memory_tile_ids = [];
 				if (tiles_flipped == memory_array.length) {
-					alert ("Board cleared... creating a new board");
+					alert ("YOU'RE FLAWLESS");
 					document.getElementById('memory_board').innerHTML = "";
 					newBoard();
 				}
