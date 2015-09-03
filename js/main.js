@@ -1,9 +1,9 @@
 var memory_array = [ 
-					'design/denim.jpg', 'design/denim.jpg',
-					'design/flowercrown.jpg', 'design/flowercrown.jpg',
-					'design/coachella.jpg', 'design/coachella.jpg',
+					'design/blue.jpg', 'design/blue.jpg',
 					'design/gold.jpg', 'design/gold.jpg',
-					'design/museum.jpg', 'design/museum.jpg',
+					'design/flawless.jpg', 'design/flawless.jpg',
+					'design/queen.jpg', 'design/queen.jpg',
+					'design/selfie.jpg', 'design/selfie.jpg',
 					'design/sunglasses.jpg', 'design/sunglasses.jpg',
 				   ];
 var memory_values = [];
@@ -17,7 +17,7 @@ $(document).ready(function(e){
 });
 
 window.onresize=function(e) {
-	$()	
+	$();
 };
 
 Array.prototype.memory_tile_shuffle = function() {
@@ -48,7 +48,7 @@ function newBoard() {
         tile.attr("src", 'design/card-backs.jpg');
 		tile.attr("id", 'card' + i);
  
-        tile.addClass("col-xs-4 col-md-3").addClass("img-responsive");
+        tile.addClass("col-xs-4 col-md-3").addClass("img-responsive").addClass("game-images");
 		tile.click ({val:memory_array[i]},memoryFlipTile);
  
         row.append(tile);

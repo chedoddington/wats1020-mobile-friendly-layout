@@ -3,14 +3,15 @@
    ========================================================================== */
 
 html {
-	margin: 1.5em;
+	margin: 1.25em;
 	padding: 0;
 }
 
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	padding-bottom: 1.5em;
 }
 
 .navbar-default{
@@ -21,11 +22,11 @@ html {
 
 .navbar-default .navbar-brand{
 	background-color: black;
-	color: #FFCDD5;
+	color: #FFC2D6;
 }
 
 #navbar-links a:hover {
-	color: #FFCDD5;
+	color: #FFC2D6;
 	background-color: black;
 }
 
@@ -38,8 +39,8 @@ li {
 }
 
 .how-to-play {
-	padding: 1em;
 	text-align: center;
+	padding-bottom: 1em;
 }
 
 #memory_board .col-md-3 {
@@ -54,19 +55,60 @@ li {
 	margin-bottom: 0;
 }
 
-.glyphicon {
-	margin-bottom: 1em;
-}
-
-.glyphicon-eye-open {
-	text-align: center;
+.glyphicon-tower {
+	padding-bottom: 1.25em;
 }
 
 #player {
 	border: 2em black solid; 
-	margin-bottom: 2em;
 }
 
-#footer-text{
-	text-align: right;
+.glyphicon-globe {
+	padding-bottom: 1.25em;
+}
+
+#scores {
+	text-align: center;
+}
+
+#scores th {
+	text-align: center;
+	font-size: 1.5em;
+	color: #FFC2D6;
+	background-color: black;
+}
+
+.table {
+	background-color: white;
+	border: black .45em solid;
+	color: black;
+}
+
+.page-footer p {
+	margin-top: 4em;
+	text-align: center;
+}
+
+.glyphicon-eye-open {
+	padding: 0;
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
 }

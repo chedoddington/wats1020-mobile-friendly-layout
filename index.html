@@ -15,7 +15,6 @@
         <style>
             body {
                 padding-top: 10px;
-                padding-bottom: 20px;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -34,27 +33,25 @@
 		<nav class="navbar navbar-default" id="navbar-brand" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a href="#memory_board" class="navbar-brand navbar-left">
-						playoncé
-					</a>
+					<a href="#memory_board" class="navbar-brand navbar-left">playoncé</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right" id="navbar-links">
 					<li> <a href="#rules"></span> Rules </a></li>
 					<li> <a href="#player"></span> Watch </a></li>
-					<li> <a href="#scores"></span> Scores </a></li>
+					<li> <a href="#footer"></span> Scores </a></li>
 				</ul>
 			</div>
 		</nav>
 		
 		<section class="how-to-play" id="rules">
-			<h4>How to Play: <small>match the yonces</small></h4>
+			<p class="lead"><strong>how to play: </strong>match the yoncés<br></p>
 		</section>
 
-		<div class="memory_game" id="memory_board"></div>
-		
+		<div class="memrory_game" id="memory_board"></div>
+			
 		<section class="video">
 			<p class="lead"> all hail the queen <br>
-			<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+			<span class="glyphicon glyphicon-tower"></span>
 			</p>
 			
 			<div class="embed-responsive embed-responsive-16by9">	
@@ -64,33 +61,43 @@
 			</div>
 		</section>
 
-		<footer class="page-footer" id="footer">
+		<section class="high-scores" id="scores">
 			<div class="container">
-				<div class="row">
-					<div class="col-xs-4">
-						<p> High Scores
-							<ul class="row" id="scores"> 
-								<li class="col-xs-6"> Blue Ivy </li>
-								<li class="col-xs-6"> 1,000,000 </li>
-								
-								<li class="col-xs-6"> Nicki </li>
-								<li class="col-xs-6"> 99,999 </li>
-								
-								<li class="col-xs-6"> HOV </li>
-								<li class="col-xs-6"> 99,998 </li>
-								
-								<li class="col-xs-6"> Mr. West </li>
-								<li class="col-xs-6"> 99,998 </li>
-							</ul>
-						</p>
-					</div>
-				</div>
-				<div class="row" id="footer-text">
-					<div class="col-xs-6">
-						<p> "This page is meant to provide an experimental proof of concept for a mobile-friendly layout that can be used to create the greatest card matching game ever."</p>
-					</div>
-				</div>
-			</div>		
+				<p class="lead">who runs the world <br>
+					<span class="glyphicon glyphicon-globe"></span>
+				</p>	
+				<table class="table table-responsive">
+					<thead>
+					  <tr>
+						<th>Name </th>
+						<th>Score</th>
+					  </tr>
+					</thead>    
+						<tbody>
+						  <tr>
+							<td>Blue Ivy </td>
+							<td>1,000,000</td>
+						  </tr>
+						  <tr>
+							<td>Nicki </td>
+							<td>99,999</td>
+						  </tr>
+						  <tr>
+							<td>Mr. West   </td>
+							<td>808</td>
+						  </tr>
+						  <tr>
+							  <td>HOV</td>
+							  <td>99</td>
+						</tbody>
+				</table>
+			</div>
+		</section>
+		
+		<footer class="page-footer" id="footer">
+				<p><small> "This page is meant to provide an experimental proof of concept for a mobile-friendly layout that can be used to create the greatest card matching game ever."</small><br>	
+					<span class="lead glyphicon glyphicon-eye-open"></span>
+				</p>	
 		</footer>
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
